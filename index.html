@@ -100,6 +100,11 @@ header p{font-style:italic}
 .organisers-group .card{max-width:900px;margin:20px auto;padding:20px}
 .organisers-group img{width:100%;max-width:900px;display:block;margin:0 auto;border-radius:12px;object-fit:cover}
 .organisers-group p{text-align:center;color:#8B0000;margin-top:10px;font-weight:bold}
+
+/* Two-up images for organisers */
+.image-pair{display:flex;gap:18px;justify-content:center;align-items:center;flex-wrap:wrap;max-width:900px;margin:20px auto}
+.image-pair img{width:100%;max-width:440px;aspect-ratio:4/3;border-radius:12px;object-fit:cover;display:block;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+@media(max-width:768px){.image-pair{flex-direction:column}.image-pair img{max-width:100%;aspect-ratio:auto}}
 .event-dates{
     margin-top:20px;
     display:inline-block;
@@ -220,6 +225,11 @@ footer{
     .venue-grid img{width:100%}
     .hero h2{font-size:2em}
 }
+
+/* Stacked images used between Meditation Camp Experience and Venue */
+.stacked-images{max-width:900px;margin:20px auto;display:flex;flex-direction:column;gap:18px;align-items:center}
+.stacked-images img{width:100%;max-width:900px;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,.08);aspect-ratio:16/9}
+@media(max-width:768px){.stacked-images img{max-width:100%;aspect-ratio:auto}}
 </style>
 </head>
 
@@ -239,7 +249,8 @@ footer{
 <section class="hero">
 <div class="container">
 <div class="hero-card" role="region" aria-label="Event highlights">
-<h1 class="hero-title">Osho Prem Mahotsav</h1>
+<h1 class="hero-title">Osho Prem Mahotsav Sanchi, Vidisha</h1>
+
 <!-- Decorative ornament -->
 <svg class="hero-ornament" width="160" height="18" viewBox="0 0 160 18" aria-hidden="true">
   <path d="M4 9 C24 1, 44 1, 64 9 C84 17, 104 17, 124 9 C144 1, 164 1, 184 9" transform="scale(.86)" fill="none" stroke="#FFD700" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"></path>
@@ -291,6 +302,16 @@ footer{
 </section>
 
 <section>
+  <div class="container">
+    <h2 class="section-title">Group Meditation Highlights</h2>
+    <div class="stacked-images">
+      <img src="images/meditation-highlight-1.jpg" alt="Meditation Highlight 1">
+      <img src="images/meditation-highlight-2.jpg" alt="Meditation Highlight 2">
+    </div>
+  </div>
+</section>
+
+<section>
 <div class="container">
 <h2 class="section-title">The Venue - Shri Tara Heritage Resort</h2>
 <div class="venue-grid">
@@ -331,7 +352,6 @@ footer{
 <img src="images/conductor-swami-anand-ekant.jpg" style="width:150px;border-radius:50%">
 <p><strong>Swami Anand Ekant</strong><br>
 Osho Madhuban, Chapa - Chhattisgarh</p>
-<p>Special live kirtan performance by <strong>Ravikal (Singer & Songwriter)</strong>.</p>
 </div>
 
 <div class="card">
@@ -352,6 +372,15 @@ Osho Madhuban, Chapa - Chhattisgarh</p>
 <p>Detailed daily schedule will be shared upon registration.</p>
 </div>
 
+<div class="card">
+<h3>📅 Music Event</h3>
+<p><strong>Date:</strong> January 10, 2026<br>
+<strong>Time:</strong> Evening 8 PM onwards</p>
+<p>Special live kirtan performance by <strong>Ravikal (Singer & Songwriter)</strong>.</p>
+</div>
+
+
+
 </div>
 </div>
 </section>
@@ -365,8 +394,11 @@ Osho Madhuban, Chapa - Chhattisgarh</p>
 <section class="organisers-group">
 <div class="container">
 <div class="card">
-<img src="images/organisers-group.jpg" alt="Organisers Group Photo" style="width:100%;max-width:900px;display:block;margin:20px auto;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)">
-<p style="text-align:center;color:#8B0000;margin-top:10px;font-weight:bold">Organisers — Swami Anand Ekant, Ma Prem Kashish, Ma Prem Roshani, Swami Sakshi (Pankaj), Swami Shunya Samadhaan, Swami Antar Geet, Swami Prem Avinashi</p>
+<div class="image-pair" style="max-width:900px;margin:20px auto;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;">
+  <img src="images/organisers-group.jpg" alt="Organisers Group Photo" style="width:100%;max-width:440px;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,.08)">
+  <img src="images/organisers-group-2.jpg" alt="Organisers Group Photo 2" style="width:100%;max-width:440px;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,.08)">
+</div>
+<p style="text-align:center;color:#8B0000;margin-top:10px;font-weight:bold">Organisers — Swami Sakshi (Pankaj) vidisha, Swami Antar Geet, Swami Antar sagar, Swami Shunya Samadhaan,  Swami Prem Avinashi</p>
 </div>
 </div>
 </section>
@@ -452,7 +484,7 @@ Note: All rooms have AC facilities. Extra charges apply for those attending only
 </div>
 
 <div class="card">
-<p>Swami Sakshi (Pankaj): +91 98275 96272</p>
+<p><strong>Swami Sakshi (Pankaj):</strong> +91 98275 96272</p>
 <p>Swami Shunya Samadhaan: +91 99070 91956</p>
 <p>Swami Antar Geet: +91 79993 64064</p>
 <p>Swami Prem Avinashi: +91 97549 40396</p>
@@ -470,6 +502,7 @@ Note: All rooms have AC facilities. Extra charges apply for those attending only
 <footer>
 <p>© 2026 Osho Prem Mahotsav - Sanchi. Organized by Osho Parivar Vidisha</p>
 <p>"Be - Don't try to become"</p>
+<p> All of you are welcomed to join us</p>
 <p>Made with ❤️ by Astitva Arya and family</p>
 </footer>
 
